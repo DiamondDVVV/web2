@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .video-card {
+            transition: all 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .play-button {
+            transition: all 0.3s ease;
+        }
+        
+        .video-card:hover .play-button {
+            transform: scale(1.1);
+        }
+        
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            transform: translateX(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 min-h-full">
+    <div class="min-h-full">
+        <!-- Video Library Screen -->
+        <div id="libraryScreen" class="container mx-auto px-6 py-8">
+          
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Video 1 -->
+                <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg cursor-pointer" onclick="playVideo('1.mp4')">
+                    <div class="relative bg-gradient-to-br from-red-400 to-pink-500 h-48 flex items-center justify-center">
+                        <div class="play-button bg-white rounded-full p-4 shadow-lg">
+                            <svg class="w-8 h-8 text-red-500 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M8 5v10l8-5-8-5z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-sm"></div>
+                    </div>
+                  
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg cursor-pointer" onclick="playVideo('2.mp4')">
+                    <div class="relative bg-gradient-to-br from-blue-400 to-cyan-500 h-48 flex items-center justify-center">
+                        <div class="play-button bg-white rounded-full p-4 shadow-lg">
+                            <svg class="w-8 h-8 text-blue-500 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M8 5v10l8-5-8-5z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-sm"></div>
+                    </div>
+                    
+                    
+                </div>
+                
+                <!-- Video 3 -->
+                <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg cursor-pointer" onclick="playVideo('3.mp4')">
+                    <div class="relative bg-gradient-to-br from-green-400 to-emerald-500 h-48 flex items-center justify-center">
+                        <div class="play-button bg-white rounded-full p-4 shadow-lg">
+                            <svg class="w-8 h-8 text-green-500 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M8 5v10l8-5-8-5z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-sm"></div>
+                    </div>
+                    <div class="p-6">
+                        
+                     
+                    </div>
+                </div>
+                
+                <!-- Video 4 -->
+                <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg cursor-pointer" onclick="playVideo('4.mp4')">
+                    <div class="relative bg-gradient-to-br from-yellow-400 to-orange-500 h-48 flex items-center justify-center">
+                        <div class="play-button bg-white rounded-full p-4 shadow-lg">
+                            <svg class="w-8 h-8 text-yellow-500 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M8 5v10l8-5-8-5z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-sm"></div>
+                    </div>
+                    <div class="p-6">
+                     
+                    </div>
+                </div>
+                
+                <!-- Video 5 -->
+                <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg cursor-pointer" onclick="playVideo('5.mp4')">
+                    <div class="relative bg-gradient-to-br from-teal-400 to-green-500 h-48 flex items-center justify-center">
+                        <div class="play-button bg-white rounded-full p-4 shadow-lg">
+                            <svg class="w-8 h-8 text-teal-500 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M8 5v10l8-5-8-5z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-sm"></div>
+                    </div>
+                   
+                </div>
+                
+                <!-- Video 6 -->
+                <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg cursor-pointer" onclick="playVideo('6.mp4')">
+                    <div class="relative bg-gradient-to-br from-purple-400 to-indigo-500 h-48 flex items-center justify-center">
+                        <div class="play-button bg-white rounded-full p-4 shadow-lg">
+                            <svg class="w-8 h-8 text-purple-500 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M8 5v10l8-5-8-5z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-sm"></div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        
+        <!-- Video Player Screen -->
+        <div id="playerScreen" class="hidden min-h-full">
+            <div class="container mx-auto px-6 py-8">
+                <!-- Back Button -->
+                <button onclick="goBack()" class="back-button flex items-center text-white hover:text-purple-200 mb-6 text-lg">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                    Back to Library
+                </button>
+                
+                <!-- Video Player -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-black rounded-xl overflow-hidden shadow-2xl mb-6">
+                        <video id="videoPlayer" class="w-full h-auto" controls>
+                            <source id="videoSource" src="" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    
+                    <!-- Video Info -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h2 id="videoTitle" class="text-3xl font-bold text-gray-800 mb-3"></h2>
+                        <p id="videoDescription" class="text-gray-600 text-lg mb-4"></p>
+                        
+                        <!-- Video Controls -->
+                        <div class="flex items-center space-x-4">
+                            <button onclick="togglePlayPause()" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                                <span id="playPauseText">Pause</span>
+                            </button>
+                            <button onclick="toggleMute()" class="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                                <span id="muteText">Mute</span>
+                            </button>
+                            <button onclick="toggleFullscreen()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                                Fullscreen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const libraryScreen = document.getElementById('libraryScreen');
+        const playerScreen = document.getElementById('playerScreen');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const videoSource = document.getElementById('videoSource');
+        const videoTitle = document.getElementById('videoTitle');
+        const videoDescription = document.getElementById('videoDescription');
+        const playPauseText = document.getElementById('playPauseText');
+        const muteText = document.getElementById('muteText');
+        
+        function playVideo(filename, title, description) {
+            // Hide library and show player
+            libraryScreen.classList.add('hidden');
+            playerScreen.classList.remove('hidden');
+            
+            // Set video details
+            videoSource.src = filename;
+            videoTitle.textContent = title;
+            videoDescription.textContent = description;
+            
+            // Load and play video
+            videoPlayer.load();
+            videoPlayer.play().catch(e => {
+                // Handle autoplay restrictions
+                console.log('Autoplay prevented, user needs to click play');
+            });
+            
+            // Update play/pause button text
+            playPauseText.textContent = 'Pause';
+        }
+        
+        function goBack() {
+            // Pause video
+            videoPlayer.pause();
+            
+            // Show library and hide player
+            playerScreen.classList.add('hidden');
+            libraryScreen.classList.remove('hidden');
+        }
+        
+        function togglePlayPause() {
+            if (videoPlayer.paused) {
+                videoPlayer.play();
+                playPauseText.textContent = 'Pause';
+            } else {
+                videoPlayer.pause();
+                playPauseText.textContent = 'Play';
+            }
+        }
+        
+        function toggleMute() {
+            if (videoPlayer.muted) {
+                videoPlayer.muted = false;
+                muteText.textContent = 'Mute';
+            } else {
+                videoPlayer.muted = true;
+                muteText.textContent = 'Unmute';
+            }
+        }
+        
+        function toggleFullscreen() {
+            if (videoPlayer.requestFullscreen) {
+                videoPlayer.requestFullscreen();
+            } else if (videoPlayer.webkitRequestFullscreen) {
+                videoPlayer.webkitRequestFullscreen();
+            } else if (videoPlayer.msRequestFullscreen) {
+                videoPlayer.msRequestFullscreen();
+            }
+        }
+        
+        // Update play/pause button when video ends or is paused/played
+        videoPlayer.addEventListener('play', () => {
+            playPauseText.textContent = 'Pause';
+        });
+        
+        videoPlayer.addEventListener('pause', () => {
+            playPauseText.textContent = 'Play';
+        });
+        
+        videoPlayer.addEventListener('ended', () => {
+            playPauseText.textContent = 'Play';
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9900eda8b0cd087b',t:'MTc2MDcxNTk4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
